@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900');
+@import './colors';
+
+body{
+	margin: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	background: $grey;
+	color: $off-white;
+	animation: Gradient 25s ease infinite;
+	background: linear-gradient(-45deg, $grey, lighten($grey, 10), $grey, lighten($grey, 10));
+	background-size: 200% 400%;
+	background-color: lighten($grey, 5);
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.container{
+	position: relative;
+  display: flex;
+	min-height: 100vh;
+  flex-direction: column;
+}
+
+.nav {
+	position: fixed;
+	left: 0;
+	top: 0;
+	margin-top: 20px;
+
+	a {
+		padding: 5px 10px 5px 0;
+	}
+}

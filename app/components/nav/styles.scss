@@ -1,0 +1,34 @@
+@import '../../routes/layout/colors';
+
+.container {
+	padding: 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logoWrapper{
+	text-decoration: none;
+}
+
+.logo{
+	text-transform: uppercase;
+	color: $light-yellow;
+	margin: 0;
+	letter-spacing: 2px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.section{
+	flex: 1;
+}
+
+.horn{
+	width: 25px;
+	cursor: pointer;
+	transition: all .2s;
+	&:hover{
+		transform: scale(1.2);
+	}
+}

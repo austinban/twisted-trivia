@@ -1,0 +1,54 @@
+@import '../../routes/layout/colors';
+
+.container {
+	display: inline-flex;
+  flex-direction: column;
+	position: relative;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 6px;
+  animation: dropIn .3s;
+  animation-timing-function: cubic-bezier(.4,.01,.25,1.25);
+	width: calc(100% - 64px);
+	border: 1px solid $off-white;
+	color: $off-white;
+	background: $grey;
+}
+
+@keyframes dropIn {
+	from{transform: scale(1.1);}
+	to{transform: scale(1);}
+}
+
+.prompt{
+	color: $off-white;
+	font-size: 20px;
+}
+
+.author{
+	font-size: 14px;
+	opacity: .7;
+}
+
+.body{
+	font-size: 16px;
+	margin: 12px 0;
+}
+
+.remove{
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	color: $light-yellow;
+	cursor: pointer;
+	font-weight: 700;
+}
+
+.like{
+	position: absolute;
+	bottom: 12px;
+	right: 12px;
+	color: $light-yellow;
+	cursor: pointer;
+	font-weight: 700;
+}
