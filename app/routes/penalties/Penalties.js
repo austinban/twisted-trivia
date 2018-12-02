@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles.scss';
 import CSSModules from 'react-css-modules';
+import { Link } from 'react-router-dom';
 
 export type Props = {}
 
@@ -18,7 +19,7 @@ class Penalties extends React.Component<OwnProps & Props> {
               <li>20 seconds freestyle</li>
               <li>Instagram a selfie with a caption of our choice (must be up for 24 hours)</li>
             </ul>
-            <div styleName="button" onClick={() => this.setState({selectedSet: null})}>Back</div>
+            <Link styleName="button" to={'/'}>Back</Link>
           </div>
       );
     }

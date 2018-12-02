@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles.scss';
 import CSSModules from 'react-css-modules';
+import { Link } from 'react-router-dom';
 
 export type Props = {}
 
@@ -26,7 +27,7 @@ class Rules extends React.Component<OwnProps & Props> {
               <li>Before a question is shown, you may choose to reduce the time the other team has to guess from 30 to 10 seconds</li>
               <li>You can phone a friend for an answer</li>
             </ul>
-            <div styleName="button" onClick={() => this.setState({selectedSet: null})}>Back</div>
+            <Link styleName="button" to={'/'}>Back</Link>
           </div>
       );
     }
