@@ -1,7 +1,7 @@
 @import '../../routes/layout/colors';
 
 .container {
-	padding: 16px;
+	padding: 16px 24px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -24,11 +24,97 @@
 	flex: 1;
 }
 
-.horn{
-	width: 25px;
+.right{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.menuItem{
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 400;
+	color: $light-yellow;
+	cursor: pointer;
+	transition: all .2s ease;
+	text-decoration: none;
+	margin-left: 16px;
+	&:hover{
+		color: $off-white;
+		transform: scale(1.05);
+	}
+}
+
+.icon{
+	width: 40px;
+  height: 40px;
 	cursor: pointer;
 	transition: all .2s;
 	&:hover{
 		transform: scale(1.2);
 	}
+}
+
+.menuWrapper{
+	margin-left: 16px;
+}
+
+.menuToggle{
+  display: block;
+	position: relative;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+	&:hover{
+		span{
+			background: $off-white;
+		}
+	}
+	span{
+	  display: block;
+	  width: 30px;
+	  height: 2px;
+	  position: relative;
+	  background: $light-yellow;
+	  border-radius: 4px;
+	  z-index: 1;
+	  transform-origin: 2px 2px;
+	  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+		&:first-child{
+		  transform-origin: 0% 0%;
+		}
+		&:nth-last-child(2){
+		  transform-origin: 0% 100%;
+			margin-bottom: 6px;
+		}
+		&:nth-last-child(3){
+			margin-bottom: 6px;
+		}
+	}
+	input:checked ~ span{
+	  opacity: 1;
+		transform: rotate(-45deg) translate(0, -1px);
+	}
+	input:checked ~ span:nth-last-child(2){
+	  opacity: 0;
+	  transform: rotate(0deg) scale(0.2, 0.2);
+	}
+	input:checked ~ span:nth-last-child(3){
+		transform: rotate(45deg) translate(-2px, -1px);
+	}
+}
+
+.input{
+  display: block;
+  width: 40px;
+  height: 32px;
+	position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
 }

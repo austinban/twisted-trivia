@@ -17,7 +17,9 @@ class Home extends React.Component<OwnProps & Props, State> {
         return (
             <div styleName="wrapper">
               <div styleName="cards">
-                <div styleName="header">Welcome to Twisted™ Trivia™</div>
+                <div styleName="header">Welcome to Twisted Trivia™</div>
+              </div>
+              <div styleName="large">
                 <div styleName="subheader">Pick your category to get started</div>
                 <div styleName="categories">
                   <Link styleName="card" to={'/category?set=90'}>90's Trivia</Link>
@@ -27,8 +29,13 @@ class Home extends React.Component<OwnProps & Props, State> {
                   <Link styleName="card" to={'/category?set=conspiracy'}>Conspiracy Theories</Link>
                   <Link styleName="card" to={'/category?set=tickle'}>Tickle Theories</Link>
                 </div>
-                <Link styleName="minorLink" to={'/rules'}>Rules</Link>
-                <Link styleName="minorLink" to={'/penalties'}>Penalties</Link>
+              </div>
+              <div styleName="footer">
+                <div>
+                  <Link styleName="minorLink" to={'/rules'}>Rules</Link>
+                  <Link styleName="minorLink" to={'/penalties'}>Penalties</Link>
+                </div>
+                <div styleName="footerText">© Twisted Trivia 2018</div>
               </div>
             </div>
         );

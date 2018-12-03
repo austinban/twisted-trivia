@@ -14,7 +14,8 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	min-height: calc(100vh - 144px);
+	margin: 20vh 0 20vh;
+	// min-height: calc(100vh - 144px);
 	animation: fadeIn 1s 1 ease;
 }
 
@@ -22,16 +23,20 @@
 	padding: 12px;
 	border-radius: 4px;
 	cursor: pointer;
-	transition: all .3s;
+	transition: all .2s ease;
 	margin: 6px;
 	font-weight: 600;
 	font-size: 20px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	text-decoration: none;
-	color: $off-white;
+	color: $light-yellow;
+	border-radius: 4px;
+	border: 2px solid $light-yellow;
 	&:hover{
-		transform: scale(1.1);
+		background: $light-yellow;
+		color: $off-white;
+		transform: scale(1.05);
 	}
 }
 
@@ -39,7 +44,7 @@
 	font-size: 32px;
 	font-weight: 600;
 	position: relative;
-	margin: 60px 16px 32px;
+	margin: 32px 16px;
 	text-align: center;
 	@media(min-width: 800px){
 		font-size: 80px;
@@ -62,7 +67,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 24px 0 32px;
+	margin: 24px auto 32px;
+	max-width: 1080px;
 }
 
 .minorLink{
@@ -72,7 +78,55 @@
 	transition: all .2s;
 	letter-spacing: 1px;
 	text-decoration: none;
+	padding: 12px;
 	&:hover{
 		color: $off-white;
 	}
+}
+
+.large{
+	background: $off-white;
+	color: $grey;
+	padding: 120px 24px 80px;
+	animation: opacityIn 1s 1 ease;
+	position: relative;
+	clip-path: polygon(0% 0%, calc(50% - 30px) 0%, 50% 30px, calc(50% + 30px) 0%, 150% 0%, 150% 100%, 0% 150%);
+	&:after {
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: solid 30px $off-white;
+    border-left: solid 30px transparent;
+    border-right: solid 30px transparent;
+	}
+}
+
+@keyframes opacityIn {
+	0%{ opacity: 0;}
+	100%{ opacity: 1;}
+}
+
+.footerWrapper{
+	background: $off-white;
+}
+
+.footer{
+	padding: 100px 24px 60px;
+	// background: $grey;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	// clip-path: polygon(0% 0%, calc(50% - 30px) 0%, 50% 30px, calc(50% + 30px) 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.footerText{
+	font-size: 12px;
+	opacity: .58;
+	margin-top: 16px;
 }

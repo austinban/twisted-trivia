@@ -7,7 +7,7 @@ body{
 	background: $grey;
 	color: $off-white;
 	animation: Gradient 25s ease infinite;
-	background: linear-gradient(-45deg, $grey, lighten($grey, 10), $grey, lighten($grey, 10));
+	background: linear-gradient(-45deg, $grey, lighten($grey, 20), $grey, lighten($grey, 20));
 	background-size: 200% 400%;
 	background-color: lighten($grey, 5);
 }
