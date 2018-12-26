@@ -150,8 +150,11 @@ class QuestionSet extends React.Component<OwnProps & Props, State> {
 
         return (
           <div styleName="question-wrapper">
-            <div styleName={classNames('question', {small: showAnswer})}>
-              {currentQuestion.question}
+            <div styleName="question-img-wrap">
+              { this.renderQuestionImg() }
+              <div styleName={classNames('question', {small: showAnswer})}>
+                {currentQuestion.question}
+              </div>
             </div>
             { this.renderAnswer() }
             { this.renderCountdown() }
@@ -160,14 +163,45 @@ class QuestionSet extends React.Component<OwnProps & Props, State> {
         );
     }
 
+    renderQuestionImg() {
+        const { questionIndex, showAnswer } = this.state;
+        const { questions } = this.props;
+        const currentQuestion = questions[questionIndex];
+
+        if(currentQuestion.questionImg) {
+            return(
+              <img styleName={classNames('questionImg', {small: showAnswer})} src={currentQuestion.questionImg} />
+            );
+        }
+        return null;
+    }
+
     renderAnswer() {
         const { showAnswer, questionIndex } = this.state;
         const { questions } = this.props;
         const currentQuestion = questions[questionIndex];
 
         if(showAnswer) {
-            return<div styleName="answer">Answer: {currentQuestion.answer}</div>;
+            return(
+              <div styleName="question-img-wrap">
+                { this.renderAnswerImg() }
+                <div styleName="answer">Answer: {currentQuestion.answer}</div>
+              </div>
+            );
         }return null;
+    }
+
+    renderAnswerImg() {
+        const { questionIndex } = this.state;
+        const { questions } = this.props;
+        const currentQuestion = questions[questionIndex];
+
+        if(currentQuestion.answerImg) {
+            return(
+              <img styleName="questionImg answerImg" src={currentQuestion.answerImg} />
+            );
+        }
+        return null;
     }
 
     renderCountdown() {

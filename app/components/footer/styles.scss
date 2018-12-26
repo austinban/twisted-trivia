@@ -1,0 +1,29 @@
+@import '../../routes/layout/colors';
+
+
+.footer{
+	padding: 100px 24px 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.footerText{
+	font-size: 12px;
+	opacity: .58;
+	margin-top: 16px;
+}
+
+.minorLink{
+	color: $light-yellow;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all .2s;
+	letter-spacing: 1px;
+	text-decoration: none;
+	padding: 12px;
+	&:hover{
+		color: $off-white;
+	}
+}

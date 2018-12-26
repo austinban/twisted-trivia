@@ -1,7 +1,10 @@
+import AquaImg from '../__assets__/images/aqua.jpg';
+import CherImg from '../__assets__/images/cher-clueless.jpg';
+
 export function getQuestionSet(category: string) {
     const popQuestions = [
-      {question: 'What was the one-hit wonder band Aqua’s notorious song?', answer: 'Barbie Girl', time: 30},
-      {question: 'What is the name of the actress who played Cher in Clueless (movie not show)?', answer: 'Alicia Silverstone', time: 30},
+      {questionImg: AquaImg, question: 'What was the one-hit wonder band Aqua’s notorious song?', answer: 'Barbie Girl', time: 30},
+      {question: 'What is the name of the actress who played Cher in Clueless (movie not show)?', answerImg: CherImg,  answer: 'Alicia Silverstone', time: 30},
       {question: 'What is the name of the necklace that Jack gives Rose onboard the Titanic?', answer: 'Heart of the Ocean', time: 30},
       {question: 'What Latina pop star was murdered by her own manager?', answer: 'SELENA (rip)', time: 30},
       {question: 'Name the five Spice Girls', answer: 'Posh, Baby, Ginger, Scary, Sporty', time: 30},
@@ -74,5 +77,6 @@ export function getQuestionSet(category: string) {
     if(category === 'nashville')return( nashvilleQuestions );
     if(category === 'conspiracy')return( conspiracyQuestions );
     if(category === 'tickle')return( tickleQuestions );
+
     return null;
 }

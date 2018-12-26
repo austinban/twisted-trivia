@@ -1,5 +1,6 @@
 dist
 node_modules
+__assets__
 coverage
 webpack.*.js
 *server.js

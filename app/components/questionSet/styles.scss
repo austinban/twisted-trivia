@@ -61,6 +61,45 @@
 	}
 }
 
+.question-img-wrap{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.questionImg{
+	max-width: 500px;
+	max-height: 250px;
+	transition: all .5s;
+	margin: 0 auto;
+	border-radius: 4px;
+	border: 1px solid $light-yellow;
+	&.small{
+		max-height: 125px;
+		max-width: 250px;
+	}
+	@media(max-width: 800px){
+		max-height: 125px;
+		max-width: 250px;
+		&.small{
+			max-height: 62.5px;
+			max-width: 125px;
+		}
+	}
+	&.answerImg{
+		margin-bottom: 24px;
+		@media(min-width: 800px){
+			animation: fadeIn3 .5s 1 ease;
+		}
+	}
+}
+
+@keyframes fadeIn3 {
+	0%{transform: scale(.8); opacity: 0; max-height: 0px;}
+	100%{transform: scale(1); opacity: 1; max-height: 250px;}
+}
+
 .subheader{
 	font-size: 18px;
 	font-weight: 600;

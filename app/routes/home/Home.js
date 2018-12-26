@@ -2,6 +2,7 @@ import CSSModules from 'react-css-modules';
 import React from 'react';
 import styles from './styles.scss';
 import { Link } from 'react-router-dom';
+import Footer from '../../components/footer/Footer';
 
 export type Props = {}
 export type OwnProps = {}
@@ -30,13 +31,7 @@ class Home extends React.Component<OwnProps & Props, State> {
                   <Link styleName="card" to={'/category?set=tickle'}>Tickle Theories</Link>
                 </div>
               </div>
-              <div styleName="footer">
-                <div>
-                  <Link styleName="minorLink" to={'/rules'}>Rules</Link>
-                  <Link styleName="minorLink" to={'/penalties'}>Penalties</Link>
-                </div>
-                <div styleName="footerText">© Twisted Trivia 2018</div>
-              </div>
+              <Footer />
             </div>
         );
     }
